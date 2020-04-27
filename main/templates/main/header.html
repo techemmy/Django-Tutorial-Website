@@ -1,0 +1,22 @@
+<head>
+    {% load static %}
+    <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/main/css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static '/main/css2/materialize.css' %}">
+    <script src="{% static '/js/materialize.js' %}"></script>
+</head>
+
+<body>
+    
+    {% include "main/includes/navbar.html" %}
+    {% include "main/includes/messages.html" %}
+
+    <div class="container">
+        <br>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+<script src="{% static 'tinymce/js/prism.js' %}"></script>
+<script>M.AutoInit();</script>
